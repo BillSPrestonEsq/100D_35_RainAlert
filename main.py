@@ -35,7 +35,7 @@ if bring_umbrella == True:
     client = Client(account_sid, auth_token)
     message = client.messages.create(
         body="It's going to rain today. Remember to bring an ☂️",
-        from_=twilio_phone,
-        to=my_phone,
+        from=twilio_phone,
+        to=my_phone
     )
     print(message.status)
